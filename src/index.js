@@ -1,20 +1,15 @@
-///desestructuracion de arrays
+import { getHeroById } from "./bases/08-imports";
 
-const characters = ['Goku','Vegeta','Trunks']
-// console.log(characters[0],characters[1],characters[2])
-
-// const [c1] = characters
-// console.log(c1)
-// const [, c2] = characters
-// console.log(c2)
-// const [ , , c3] = characters
-// console.log(c3)
-
-const returnArray = () => {
-    return ['ABC', 123]
+const getHeroByIdAsync = (id) =>{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const hero = getHeroById(id)
+            resolve(hero)
+            reject('Cant find hero')
+        }, 1000);
+    })
 }
 
-// const arr = returnArray()
-const [letters, numbers] = returnArray()
-
-console.log(letters, numbers)
+getHeroByIdAsync(3)
+    .then((hero) => console.log('Hero:', hero.name))
+    .catch(err => console.warn(err))
