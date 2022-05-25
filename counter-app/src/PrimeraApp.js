@@ -1,6 +1,12 @@
-const PrimeraApp = () => {
+const PrimeraApp = ({ saludo = "Hola Mundo"}) => {
+
+    // const saludo = 'Hola Mundo'
+
   return (
-    <h1>PrimeraApp</h1>
+      <>
+        <h1>{ saludo }</h1>
+        <p>Mi primera aplicación</p>
+      </>
   )
 }
 
