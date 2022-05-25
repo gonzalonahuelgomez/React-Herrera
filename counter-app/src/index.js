@@ -7,4 +7,4 @@ import './index.css'
 
 const divRoot = document.querySelector('#root')
 
-createRoot(divRoot).render(<PrimeraApp /*saludo="Hola Mundo desde el index"*//>)
+createRoot(divRoot).render(<PrimeraApp saludo="Hola Mundo desde el index"/>)
