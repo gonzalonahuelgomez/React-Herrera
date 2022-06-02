@@ -19,7 +19,7 @@ const GifGrid = ({category}) => {
             return({
                 id,
                 title,
-                images: images?.downsized_medium.url
+                url: images?.downsized_medium.url
             })
         })
 
