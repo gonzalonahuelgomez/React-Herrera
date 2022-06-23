@@ -21,7 +21,8 @@ const AddCategory = ({ setCategories }) => {
             <input
                 type="text"
                 value={ inputValue }
-                onChange={ handleChange }/>
+                onChange={ handleChange }
+                placeholder={ "Buscar..." }/>
 
         </form>
     )
