@@ -22,7 +22,8 @@ const GifGrid = ({ category, setCategories }) => {
                     images.map(img => 
                         <GifGridItem
                             key={img.id}
-                            {...img}/>
+                            {...img}
+                        />
                     )
                 }          
             </div>
