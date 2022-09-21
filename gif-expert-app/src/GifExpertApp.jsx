@@ -17,22 +17,18 @@ const GifExpertApp = () => {
       <>
         <h2>GifExpertApp</h2>
         <AddCategory
-          setCategories={setCategories}
+          setCategories={ setCategories }
         />
         <hr/>
 
-        {/* <button onClick={handleAdd}>Agregar</button> */}
-
         <ol>
-          { 
+          { categories.length > 0 ?
             categories.map(category =>
               <GifGrid
                 key={ category }
                 category={ category }
-                categories={ categories }
-                setCategories={setCategories}
-                />
-            )
+                setCategories={ setCategories }/>
+            ) : <h1 style={{textAlign: "center"}}>No hay gif para mostrar, inserte en el buscador</h1>
           }
         </ol>
       </>
